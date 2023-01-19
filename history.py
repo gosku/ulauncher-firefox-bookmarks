@@ -24,7 +24,7 @@ class FirefoxHistory():
 
     def searchPlaces(self):
         #   Firefox folder path
-        firefox_path = os.path.join(os.environ['HOME'], '.mozilla/firefox/')
+        firefox_path = os.path.join('/home/gosku/snap/firefox/common/.mozilla/firefox/')
         #   Firefox profiles configuration file path
         conf_path = os.path.join(firefox_path,'profiles.ini')
         #   Profile config parse
@@ -35,6 +35,7 @@ class FirefoxHistory():
         sql_path = os.path.join(firefox_path,prof_path)
         #   Sqlite db path
         return os.path.join(sql_path,'places.sqlite')
+
 
     #   Get hostname from url
     def __getHostname(self,str):
